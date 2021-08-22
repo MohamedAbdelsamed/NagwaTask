@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('./Fonts/icomoon.eot?nmqpt2');
+    src:  url('./Fonts/icomoon.eot?nmqpt2#iefix') format('embedded-opentype'),
+      url('./Fonts/icomoon.ttf?nmqpt2') format('truetype'),
+      url('./Fonts/icomoon.woff?nmqpt2') format('woff'),
+      url('./Fonts/icomoon.svg?nmqpt2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-twitter:before {
+    content: "\e900";
+  }
+  .icon-youtube-logotype:before {
+    content: "\e901";
+  }
+  .icon-facebook:before {
+    content: "\e902";
+  }
+
+@font-face {
+    font-family: 'GE SS Two';
+    src: url('./Fonts/GESSTwoLight-Light.eot');
+    src: url('./Fonts/GESSTwoLight-Light.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/GESSTwoLight-Light.woff2') format('woff2'),
+        url('./Fonts/GESSTwoLight-Light.woff') format('woff'),
+        url('./Fonts/GESSTwoLight-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Droid Arabic Naskh';
+    src: url('./Fonts/DroidArabicNaskh.eot');
+    src: url('./Fonts/DroidArabicNaskh.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/DroidArabicNaskh.woff2') format('woff2'),
+        url('./Fonts/DroidArabicNaskh.woff') format('woff'),
+        url('./Fonts/DroidArabicNaskh.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+    direction: rtl;
+}
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    background-color: #20639c;
+    
+  }
+
+  .right {
+    right: 0;
+    background-color: #f7d65c;
+  }
+  .right h2{
+    color: #20639c;
+    font-family: 'GE SS Two';
+    margin-bottom: 7px;
+  }
+  .right span,.right p{
+    color: #373734;
+    font-family: "Droid Arabic Naskh";
+    text-align: center;
+    font-weight: 600;
+  }
+  .right ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+  }
+  .right ul li{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 15px;
+  }
+ 
+  .right ul li a{
+    color: #FFF;
+    text-decoration: none;
+  }
+  .right ul li a i{
+    font-size: 20px;
+    line-height: 40px;
+}
+  
+  .right ul li.youtube{
+    background: #f61c0d;
+  }
+  .right ul li.twitter{
+    background: #03a9f4;
+  }
+  .right ul li.facebook{
+    background: #3b5999;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 72%;
+  }
+  .login-form{
+    left: 60%;
+    top: 40%;
+  }  
+  .login-form h3{
+    color: #fff;
+    font-family: 'GE SS Two';
+    margin-bottom: 50px;
+  }
+
+  .login-form button{
+    color: #f7d65c;
+    background: transparent;
+    border: 1px solid #f7d65c;
+    margin-top: 20px;
+    width: 70%;
+    height: 40px;
+    border-radius: 50px;
+    font-family: "Droid Arabic Naskh";
+  }
+
+  .centered .form-control::placeholder{
+      color: #fff;
+      font-family: "Droid Arabic Naskh";
+  }
+  .centered .form-control{
+    width: 70%;
+    background: transparent;
+    border: 1px solid #9fbed8;
+    outline: none;
+    box-shadow: none;
+    height: 35px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+  }
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  footer{
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: "Droid Arabic Naskh";
+    background: #fff;
+    padding: 15px 0;
+    color: #525252;
+  }
+
+  /***  Media Query  ****/
+  @media (max-width:600px){
+    .split{
+        position: static;
+    }
+    .centered {
+        position: static;
+        top: 50%;
+        left: 45%;
+        transform: none;
+        text-align: center;
+        width: auto;
+    }
+    .split {
+        height: 100%;
+        width: 100%;
+        position: static;
+    }
+    .left{
+        padding-bottom: 30px;
+    }
+    footer{
+        bottom: auto;
+    }
+  }
